@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <title>CRUD REST API TO DO LIST</title>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+        <script src="main.js" charset="utf-8"></script>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>LISTA COSE DA FARE<i class="fa fa-plus"></i></h1> <input class="aggiungi" type="text" placeholder="Aggiungi una nuova cosa da fare e premi invio">
+            <ul id="todo-list">
+
+            </ul>
+        </div>
+        <span></span>
+        <script id="todo-template" type="text/x-handlebars-template">
+            <li data-todo_id="{{todo_id}}"><span class="cancella"><i class='fa fa-trash'></i></span><span class="modifica"><i class="fas fa-pencil-alt"></i></span></span><span class="salva"><i class="fas fa-save"></i></span><i class="fas fa-circle"></i> <span class="todo-text">{{todo_text}}</span>
+            <input class="edit-todo-input" type="text" value="{{todo_text}}"></li>
+        </script>
+    </body>
+</html>
